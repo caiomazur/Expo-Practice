@@ -2,7 +2,7 @@ import { useState } from "react";
 import { StyleSheet, FlatList, Image, Platform, Pressable } from "react-native";
 
 export default function EmojiList({ onSelect, onCloseModal }) {
-  // Array of emoji images
+  // State to store the array of emoji images
   const [emoji] = useState([
     require("../assets/images/emoji1.png"),
     require("../assets/images/emoji2.png"),
@@ -22,7 +22,9 @@ export default function EmojiList({ onSelect, onCloseModal }) {
         return (
           <Pressable
             onPress={() => {
+              // Call the onSelect function with the selected item (emoji)
               onSelect(item);
+              // Call the onCloseModal function to close the modal
               onCloseModal();
             }}
           >
