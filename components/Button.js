@@ -33,7 +33,7 @@ function Button({ label, theme, onPress }) {
     <View style={styles.buttonContainer}>
       <Pressable
         style={styles.button}
-        onPress={() => alert("Congratulations! You pressed a button!")}
+        onPress={onPress}
       >
         <Text style={styles.buttonLabel}>{label}</Text>
       </Pressable>
